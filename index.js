@@ -149,5 +149,6 @@ function showLogin() {
   root.innerHTML =str
  }
 
-  showHome()
-// showLogin();
+  
+//  showHome()
+showLogin();
