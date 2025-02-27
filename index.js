@@ -145,10 +145,22 @@ function showLogin() {
 
 
  function showHome(){
-  let str ='home page'
+  let str =`<div class="card text-center">
+  <div class="card-header">
+    Featured
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Best Bank of Year</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <button onclick='showForm()' class="btn btn-primary">Create Account</button>
+  </div>
+  <div class="card-footer text-muted">
+    2 days ago
+  </div>
+</div>`
   root.innerHTML =str
  }
 
   
-//  showHome()
-showLogin();
+ showHome()
+//showLogin();
