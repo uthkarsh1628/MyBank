@@ -115,25 +115,27 @@ function chkUser() {
 }
 function showForm() {
   let str = `
+  <div class=" m-5 p-5 bg-info rounded text-center">
   <h2>Registration Form</h2>
-  <p><input type="text" id="name" placeholder="Name"></p>
-  <p><input type="text" id="email" placeholder="Email"></p>
-  <p><input type="password" id="password" placeholder="Password"></p>
-  <p><input type="date" id="dob"></p>
+  <p><input type="text" id="name" class='form-control' placeholder='Name'></p>
+  <p><input type="text" id="email"  class='form-control'placeholder='Email address'></p>
+  <p><input type="password" id="password" class='form-control' placeholder="Password"></p>
+  <p><input type="date" id="dob"  class='form-control'></p>
   <p><button onclick='addUser()'>Submit</button></p>
   <p>Already a member?<button onclick='showLogin()'>Login Here</button></p>
+  </div>
   `;
   root.innerHTML = str;
 }
 function showLogin() {
   let str = `
-  <div>
+  <div class=" m-5 p-5 bg-info rounded text-center">
       <h2>Login Form</h2>
       <div id='msg'></div>
-      <p><input id="email" type="text"></p>
-      <p><input id="password" type="password"></p>
-      <button onclick='chkUser()'>Log In</button>
-      <p><button onclick='showForm()'>Create Account</button></p> 
+      <p><input id="email" class='form-control'placeholder='Email address' type="text"></p>
+      <p><input id="password" class='form-control'placeholder='Password' type="password"></p>
+      <button onclick='chkUser()' class="btn btn-primary w-100">Log In</button>
+      <p><button onclick='showForm()'class="btn btn-success  mt-3">Create Account</button></p> 
   </div>
   `;
   root.innerHTML = str;
