@@ -3,6 +3,19 @@ let user = {}
 // let useremail = "";
 // let username = "";
 // let currBalance = 0;
+function showuser(){
+  let length=users.length
+  let str=""
+  for(let i=0;i<length;i++)
+  {
+      str+=`<div>${users[i].name}-
+          ${users[i].email}-
+          ${users[i].pass}-
+          ${users[i].dob}
+          <button onclick='deleteuser(${i})'>delete</button>`
+  }
+  data.innerHTML=str
+}
 document.write("<div id=root></div>");
 function showUser() {
   if (document.getElementById("type").value == "3") {
@@ -120,7 +133,7 @@ function showLogin() {
       <p><input id="email" type="text"></p>
       <p><input id="password" type="password"></p>
       <button onclick='chkUser()'>Log In</button>
-      <p><button onclick='showForm()'>Create Account</button></p>
+      <p><button onclick='showForm()'>Create Account</button></p> 
   </div>
   `;
   root.innerHTML = str;
