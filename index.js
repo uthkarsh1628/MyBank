@@ -66,6 +66,7 @@ function saveData() {
 }
 function home() {
   let str = `
+  <div class=" m-5 p-5 bg-info rounded text-center">
       <h3>Welcome ${user.name}</h3>
       <button onclick='showLogin()'>Logout</button>
       <p><select id="type" onchange='showUser()'>
@@ -78,7 +79,7 @@ function home() {
          <p><input type="number" id="amount" placeholder="Enter Amount"></p>
          <button onclick='saveData()'>Submit</button>
          <p><b>Current Balance: <span id='spBalance'>${user.balance}</span></b></p>
-
+        </div>
       `;
   root.innerHTML = str;
 }
@@ -121,8 +122,8 @@ function showForm() {
   <p><input type="text" id="email"  class='form-control'placeholder='Email address'></p>
   <p><input type="password" id="password" class='form-control' placeholder="Password"></p>
   <p><input type="date" id="dob"  class='form-control'></p>
-  <p><button onclick='addUser()'>Submit</button></p>
-  <p>Already a member?<button onclick='showLogin()'>Login Here</button></p>
+  <p><button onclick='addUser()' class="btn btn-success w-100" >Submit</button></p>
+  <p>Already a member?<button onclick='showLogin()' class="btn btn-primary w-75" >Login Here</button></p>
   </div>
   `;
   root.innerHTML = str;
@@ -141,4 +142,12 @@ function showLogin() {
   root.innerHTML = str;
 }
 
-showLogin();
+
+
+ function showHome(){
+  let str ='home page'
+  root.innerHTML =str
+ }
+
+  showHome()
+// showLogin();
